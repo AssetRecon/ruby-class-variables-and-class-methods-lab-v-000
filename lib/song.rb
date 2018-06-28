@@ -1,27 +1,37 @@
 class Song
-attr_accessor :name
-attr_reader :artist, :genres
-@@counter = 0
+attr_accessor :name, :artist, :genres
+
+@@count = 0
 @@artists = []
 @@genres = []
-  def initialize(name)
+  def initialize(name, artist, genre)
     @name = name
-    @@counter += 1
-    @@artist << name
+    @@count += 1
+    @@genres << genres
+    @@artist << artist
+    
   end
 
   def count
     @@counter
   end
 
-  def artists
-    @@artists << artists
-    @artist = artists
+  def genres
+    @@genres.uniq
   end
 
-  def genres=(genres)
-    @@genres << genres
-    @genres = genres
-    
+  def artists
+    @@artists.uniq
+  end
+
+  def genre_count
+    genre_hash = {}
+    @@genres.each do |genre|
+      if !genre.include?
+        genre_hash[genre] = 1
+      else
+        genre_hash[genre] = +=1
+
+    end
   end
 end
