@@ -35,4 +35,6 @@ attr_accessor :name, :artist, :genres
     end
     genre_hash
   end
+
+  
 end
