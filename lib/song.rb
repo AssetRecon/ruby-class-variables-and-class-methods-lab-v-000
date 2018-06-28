@@ -9,7 +9,7 @@ attr_accessor :name, :artist, :genres
     @@count += 1
     @@genres << genres
     @@artist << artist
-    
+
   end
 
   def count
@@ -36,5 +36,5 @@ attr_accessor :name, :artist, :genres
     genre_hash
   end
 
-  
+
 end
